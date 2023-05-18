@@ -56,6 +56,7 @@ export default function Home() {
                     tab === idx ? "border-white" : "border-transparent"
                   }`}
                   onClick={() => setTab(idx)}
+                  key={name}
                 >
                   {name}
                 </div>
@@ -63,7 +64,7 @@ export default function Home() {
             </div>
             <div className="flex w-full flex-col text-base md:text-lg px-6 mt-6 space-y-2">
               {setlist[tab].map(({ title, composer }, idx) => (
-                <div className="flex">
+                <div className="flex" key={idx}>
                   <p className="w-8">{String(idx + 1).padStart(2, "0")}.</p>
                   <p>
                     {title} - {composer}
