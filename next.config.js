@@ -1,4 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = { output: "export", basePath: "/danfung-setlist" };
+const nextConfig = { output: "export" };
 
 module.exports = nextConfig;

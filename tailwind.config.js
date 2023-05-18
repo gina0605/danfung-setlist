@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        poster: "url('/danfung-setlist/poster.jpeg')",
+        poster: "url('/poster.jpeg')",
       },
       fontFamily: {
         suite: ['"SUITE-Regular"'],
