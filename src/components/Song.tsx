@@ -29,8 +29,8 @@ export const Song = ({ idx, data }: SongProps) => {
             open ? "max-h-32 py-1 text-white" : "h-0 max-h-0 text-transparent"
           }`}
         >
-          {session.map((s) => (
-            <p>{s}</p>
+          {session.map((s, idx) => (
+            <p key={idx}>{s}</p>
           ))}
         </div>
       )}
