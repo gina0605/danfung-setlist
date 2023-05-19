@@ -109,29 +109,30 @@ export default function Home() {
   const [tab, setTab] = useState(0);
 
   return (
-    <main className="flex min-h-fit h-screen flex-col items-center justify-between bg-black w-screen">
-      <div className="w-full h-full bg-poster bg-cover bg-repeat-y bg-top min-h-screen flex justify-center">
-        <div className="w-[30rem] h-full relative flex flex-col">
-          <div className="w-full h-full min-h-screen absolute inset-0 bg-black opacity-70 z-0" />
-          <div className="relative z-30 text-white font-suite font-light">
-            <div className="flex w-full justify-around text-2xl">
-              {bands.map((name, idx) => (
-                <div
-                  className={`w-32 text-center cursor-pointer transition-all border-b-2 duration-500 mt-6 ${
-                    tab === idx ? "border-white" : "border-transparent"
-                  }`}
-                  onClick={() => setTab(idx)}
-                  key={name}
-                >
-                  {name}
-                </div>
-              ))}
-            </div>
-            <div className="flex w-full flex-col px-6 mt-6 space-y-2 mb-4">
-              {setlist[tab].map((data, idx) => (
-                <Song data={data} idx={idx} key={idx} />
-              ))}
-            </div>
+    <main className="flex justify-center relative">
+      <div className="w-[30rem] h-fit min-h-screen flex flex-col static">
+        <div className="h-full w-screen bg-poster bg-cover bg-top absolute inset-0" />
+        <div className="h-full w-screen absolute flex">
+          <div className="w-[30rem] h-full bg-black opacity-70 z-0" />
+        </div>
+        <div className="relative z-30 text-white font-suite font-light">
+          <div className="flex w-full justify-around text-2xl">
+            {bands.map((name, idx) => (
+              <div
+                className={`w-32 text-center cursor-pointer transition-all border-b-2 duration-500 mt-6 ${
+                  tab === idx ? "border-white" : "border-transparent"
+                }`}
+                onClick={() => setTab(idx)}
+                key={name}
+              >
+                {name}
+              </div>
+            ))}
+          </div>
+          <div className="flex w-full flex-col px-6 mt-6 space-y-2 mb-4">
+            {setlist[tab].map((data, idx) => (
+              <Song data={data} idx={idx} key={idx} />
+            ))}
           </div>
         </div>
       </div>
