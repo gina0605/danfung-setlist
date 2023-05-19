@@ -25,11 +25,11 @@ export const Song = ({ idx, data }: SongProps) => {
       </div>
       {session && (
         <div
-          className={`pl-8 transition-all duration-500 text-sm ${
-            open ? " h-5 py-1 text-white" : "h-0 text-transparent"
+          className={`pl-8 transition-all duration-500 text-sm h-fit ${
+            open ? "max-h-10 py-1 text-white" : "h-0 max-h-0 text-transparent"
           }`}
         >
-          {open ? session : ""}
+          {session}
         </div>
       )}
     </div>

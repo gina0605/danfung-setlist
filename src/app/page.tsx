@@ -73,10 +73,10 @@ export default function Home() {
   const [tab, setTab] = useState(0);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-black w-screen h-screen">
+    <main className="flex min-h-screen flex-col items-center justify-between bg-black w-screen h-max">
       <div className="w-full h-full bg-poster min-h-screen bg-cover flex justify-center">
         <div className="w-[30rem] h-full relative flex flex-col">
-          <div className="w-full h-full absolute inset-0 bg-black opacity-70 z-0" />
+          <div className="w-full h-full min-h-screen absolute inset-0 bg-black opacity-70 z-0" />
           <div className="relative z-30 text-white font-suite font-light">
             <div className="flex w-full justify-around text-2xl">
               {bands.map((name, idx) => (
@@ -91,7 +91,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="flex w-full flex-col text-base md:text-lg px-6 mt-6 space-y-2">
+            <div className="flex w-full flex-col px-6 mt-6 space-y-2 mb-4">
               {setlist[tab].map((data, idx) => (
                 <Song data={data} idx={idx} key={idx} />
               ))}
