@@ -111,7 +111,7 @@ export default function Home() {
   return (
     <main className="flex justify-center relative">
       <div className="w-[30rem] h-fit min-h-screen flex flex-col static">
-        <div className="h-full w-screen bg-poster bg-cover bg-top absolute inset-0" />
+        <div className="h-full w-screen bg-poster bg-[size:100%] bg-repeat-y absolute inset-0 bg-fixed" />
         <div className="h-full w-screen absolute flex">
           <div className="w-[30rem] h-full bg-black opacity-70 z-0" />
         </div>
