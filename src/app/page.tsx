@@ -28,7 +28,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="flex w-full flex-col px-6 mt-6 space-y-2 mb-4">
+          <div className="flex w-full flex-col px-6 mt-6 space-y-2 mb-28">
             {setlist[tab].map((data, idx) => (
               <Song data={data} idx={idx} key={idx} />
             ))}
