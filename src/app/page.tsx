@@ -73,8 +73,8 @@ export default function Home() {
   const [tab, setTab] = useState(0);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-black w-screen h-max">
-      <div className="w-full h-full bg-poster min-h-screen bg-cover flex justify-center">
+    <main className="flex min-h-fit h-screen flex-col items-center justify-between bg-black w-screen">
+      <div className="w-full h-full bg-poster bg-cover bg-repeat-y bg-top min-h-screen flex justify-center">
         <div className="w-[30rem] h-full relative flex flex-col">
           <div className="w-full h-full min-h-screen absolute inset-0 bg-black opacity-70 z-0" />
           <div className="relative z-30 text-white font-suite font-light">
