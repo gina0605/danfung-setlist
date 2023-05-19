@@ -1,24 +1,53 @@
 "use client";
 
+import { Song } from "@/components/Song";
+import { song } from "@/types";
 import { useState } from "react";
-
-type song = {
-  title: string;
-  composer: string;
-};
 
 const bands = ["단풍", "더블에이뮤직"];
 
 const setlist: song[][] = [
   [
-    { title: "한낮", composer: "쏜애플" },
-    { title: "Plug In Baby", composer: "Muse" },
-    { title: "낯선 열대", composer: "쏜애플" },
-    { title: "로마네스크", composer: "쏜애플" },
-    { title: "KICK BACK", composer: "Yonezu Kenshi" },
-    { title: "Urban Lifestyle", composer: "데이브레이크" },
-    { title: "Bad Liar", composer: "Imagine Dragons" },
-    { title: "기억을 걷는 시간", composer: "넬" },
+    {
+      title: "한낮",
+      composer: "쏜애플",
+      session: "V 임한비 G 박조현 한석희 B 신원직 D 송석빈",
+    },
+    {
+      title: "Plug In Baby",
+      composer: "Muse",
+      session: "V 김창덕 G 이재만 한석희 B 신원직 K 여창민 D 송석빈",
+    },
+    {
+      title: "낯선 열대",
+      composer: "쏜애플",
+      session: "V 남유주 G 이주미 이재만 B 송석빈 D 임유진",
+    },
+    {
+      title: "로마네스크",
+      composer: "쏜애플",
+      session: "V 최현서 G 한석희 이주미 B 송석빈 K 여창민 D 임유진",
+    },
+    {
+      title: "KICK BACK",
+      composer: "Yonezu Kenshi",
+      session: "V 남유주 G 박조현 B 신원직 K 여창민 김세은 D 임유진",
+    },
+    {
+      title: "Urban Lifestyle",
+      composer: "데이브레이크",
+      session: "V 임한비 G 이주미 B 신원직 K 여창민 김세은 D 임유진",
+    },
+    {
+      title: "Bad Liar",
+      composer: "Imagine Dragons",
+      session: "V 김창덕 G 박조현 이재만 B 신원직 K 김세은 여창민 D 임유진",
+    },
+    {
+      title: "기억을 걷는 시간",
+      composer: "넬",
+      session: "V 최현서 G 이재만 한석희 B 송석빈 K 김세은 여창민 D 임유진",
+    },
   ],
   [
     { title: "Where the Streets Have No Name", composer: "U2" },
@@ -63,13 +92,8 @@ export default function Home() {
               ))}
             </div>
             <div className="flex w-full flex-col text-base md:text-lg px-6 mt-6 space-y-2">
-              {setlist[tab].map(({ title, composer }, idx) => (
-                <div className="flex" key={idx}>
-                  <p className="w-8">{String(idx + 1).padStart(2, "0")}.</p>
-                  <p>
-                    {title} - {composer}
-                  </p>
-                </div>
+              {setlist[tab].map((data, idx) => (
+                <Song data={data} idx={idx} key={idx} />
               ))}
             </div>
           </div>
