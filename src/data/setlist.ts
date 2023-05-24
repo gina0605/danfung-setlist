@@ -236,8 +236,8 @@ export const setlist: song[][] = [
       ],
     },
     {
-      title: "Sk8er Boi",
-      composer: "Avril Lavigne",
+      title: "?",
+      composer: "?",
       session: [
         "V 이지인",
         "G 김우재 이지수",
